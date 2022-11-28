@@ -3,8 +3,8 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 @app.route("/")
-def hello_world():
-   execfile('main.py')
+def start_quiz():
+   return render_template("quiz.html")
 
 if __name__ == '__main__':
     app.run(debug=True)
